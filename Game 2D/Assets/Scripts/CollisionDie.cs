@@ -6,19 +6,23 @@ using UnityEngine;
 
 public class CollisionDie : MonoBehaviour
 {
+    public AudioClip DeadSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
+        {
             collision.gameObject.GetComponent<Animator>().SetTrigger("Fail");
-
+            AudioSource.PlayClipAtPoint(DeadSound, transform.position);
+        }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
 

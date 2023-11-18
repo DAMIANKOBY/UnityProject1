@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PointsCollect : MonoBehaviour
 {
+    public AudioClip clip;
     private CounterController counterController;
 
-    // Start is called before the first frame update
     void Start()
     {
         counterController = GameObject.Find("Manager").GetComponent<CounterController>();
@@ -16,7 +16,6 @@ public class PointsCollect : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -28,6 +27,7 @@ public class PointsCollect : MonoBehaviour
         {
             Destroy(this.gameObject);
             counterController.IncrementationCounter();
+            AudioSource.PlayClipAtPoint(clip, transform.position);
         }
     }
 }
