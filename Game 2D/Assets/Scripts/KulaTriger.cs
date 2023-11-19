@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class KulaTriger : MonoBehaviour
 {
-	public Rigidbody2D rb2d;
-	public BoxCollider2D boxCollider;
+	private Rigidbody2D rb2d;
+	public GameObject hero;
+	public GameObject triger;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,11 @@ public class KulaTriger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+	float wspolrzednaXGracza = hero.transform.position.x;
+        if( wspolrzednaXGracza > triger.transform.position.x){
+		
+		rb2d.isKinematic = false;
+		Debug.Log("Współrzędna X gracza: " + wspolrzednaXGracza);
+	}
     }
-	public void triger()
-    {
-        
-            rb2d.isKinematic = false;
-        
-    }
-
 }
