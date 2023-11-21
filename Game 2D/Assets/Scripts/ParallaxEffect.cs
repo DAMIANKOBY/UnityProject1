@@ -14,9 +14,7 @@ namespace _Scripts
 
         private void Start()
         {
-            _startingPos = transform.position.x;
-
-            
+            _startingPos = transform.position.x; 
         }
 
 
