@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 3131854741
     locked: 0
+  - name: Third_plane
+    uniqueID: 2971706787
+    locked: 0
   - name: Second plane
     uniqueID: 3528675865
     locked: 0
