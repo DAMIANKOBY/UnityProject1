@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/WorkShop_Menu/Demo/demo.unity
+    guid: d14cc8da0b5e440e594ba5833d7a69f4
+  - enabled: 1
     path: Assets/Scenes/Graveyard.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Winter.unity
+    guid: e2532901a637d5349934a75e7cfc9b9a
+  - enabled: 1
+    path: Assets/Scenes/Infinity.unity
+    guid: aa9b5cd50d07ae245a7ead983f365363
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: bdd3ff9717cdf4809965f82382f316b1
   m_configObjects: {}
