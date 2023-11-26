@@ -16,6 +16,8 @@ public class EndGame : MonoBehaviour
 		Debug.LogError("The End");
 		finalScreen.SetActive(true);
 		Invoke("LoadNewLevel", 3f);
+
+               
          }
 	}
 
