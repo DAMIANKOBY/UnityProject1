@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace QuantumTek.SimpleMenu
@@ -58,7 +58,7 @@ namespace QuantumTek.SimpleMenu
             // Get starting window
             int windowCount = windows.Count;
             for (int i = 0; i < windowCount; ++i)
-            { if (windows[i].content.gameObject.activeSelf) current = windows[i]; }
+            { if (windows[i].content.gameObject.activeSelf) current = windows[i];}
 
             ChangeTab(current);
             
