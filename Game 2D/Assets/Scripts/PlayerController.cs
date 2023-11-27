@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public int amountOfLives = 1;
     public GameObject gameOverScreen;
 
+    bool isFalling = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -79,11 +81,11 @@ public class PlayerController : MonoBehaviour
             inAir = true;
 
 
-        if (rgdBody.velocity.y < -30)
+        if (gameObject.transform.position.y < -30 && !isFalling)
         {
+            isFalling = true;
             Dead();
             AudioSource.PlayClipAtPoint(DeadSound, transform.position);
-            
         }
 
         if (anim.GetBool("Fail") == true) Dead();
@@ -104,7 +106,8 @@ public class PlayerController : MonoBehaviour
 
     public void restartHero() 
     {
-            gameObject.transform.position = startPoint.position;
+         gameObject.transform.position = startPoint.position;
+         isFalling = false;
     }
 
     void GameOver()
