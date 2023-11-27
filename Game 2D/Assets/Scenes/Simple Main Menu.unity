@@ -937,7 +937,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6740656027005264890, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6740656027183693130, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_Pivot.x
@@ -1031,6 +1031,10 @@ PrefabInstance:
       propertyPath: scene
       value: Infinity
       objectReference: {fileID: 0}
+    - target: {fileID: 7358243524653340615, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_text
+      value: Journey
+      objectReference: {fileID: 0}
     - target: {fileID: 7358243525427772856, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1038,6 +1042,10 @@ PrefabInstance:
     - target: {fileID: 7358243525799453608, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358243526371396055, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_text
+      value: Adventure
       objectReference: {fileID: 0}
     - target: {fileID: 7527296206144484841, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target

@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroSpeed: 10
-  jumpForce: 600
+  jumpForce: 650
   GroundTester: {fileID: 1750139955}
   layersToTest:
     serializedVersion: 2
@@ -403,7 +403,7 @@ MonoBehaviour:
   JumpStartSound: {fileID: 8300000, guid: 1a9abdcacc68aa447b151d0b1f93754b, type: 3}
   JumpEndSound: {fileID: 8300000, guid: a967f92e38352bb4291945423de63499, type: 3}
   useLives: 1
-  amountOfLives: 2
+  amountOfLives: 10
   gameOverScreen: {fileID: 1216673354}
   livesText: {fileID: 1759473350}
 --- !u!95 &177269581
@@ -2488,6 +2488,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292472889666596915, guid: 4d1f3e8f8bc35a946891c6784175979b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292472889666596916, guid: 4d1f3e8f8bc35a946891c6784175979b, type: 3}
+      propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292472889666596917, guid: 4d1f3e8f8bc35a946891c6784175979b, type: 3}
