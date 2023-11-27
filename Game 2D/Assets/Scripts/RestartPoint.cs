@@ -28,7 +28,7 @@ public class RestartPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             restartPointManager.UpdateStartPoint(this.gameObject.transform);
-            spriteRenderer.color = new Color(0.3f, 0.7f, 0.2f);
+            if (spriteRenderer != null) spriteRenderer.color = new Color(0.3f, 0.7f, 0.2f);
         }
     }
 

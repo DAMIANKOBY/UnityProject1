@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     public AudioClip JumpStartSound;
     public AudioClip JumpEndSound;
     AudioSource audioSrc;
+
+    public bool useLives;
+    public int amountOfLives = 1;
+    public GameObject gameOverScreen;
 
     void Start()
     {
@@ -73,16 +78,19 @@ public class PlayerController : MonoBehaviour
         else
             inAir = true;
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Dead"))
-        {
-            rgdBody.velocity = Vector2.zero;
-            return;
-        }
 
         if (rgdBody.velocity.y < -30)
         {
+            Dead();
             AudioSource.PlayClipAtPoint(DeadSound, transform.position);
-            restartHero();
+            
+        }
+
+        if (anim.GetBool("Fail") == true) Dead();
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Dead"))
+        {
+            rgdBody.velocity = Vector2.zero;
         }
     }
 
@@ -96,6 +104,27 @@ public class PlayerController : MonoBehaviour
 
     public void restartHero() 
     {
-        gameObject.transform.position = startPoint.position;
+            gameObject.transform.position = startPoint.position;
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("Simple Main Menu");
+    }
+
+    public void Dead()
+    {
+        if (useLives == true)
+        {
+            amountOfLives -= 1;
+            if (amountOfLives > 0)
+                restartHero();
+            else
+            {
+                Debug.LogError("Game Over");
+                gameOverScreen.SetActive(true);
+                Invoke("GameOver", 3f);
+            }
+        }
     }
 }
