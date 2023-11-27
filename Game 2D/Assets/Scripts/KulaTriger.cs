@@ -7,6 +7,7 @@ public class KulaTriger : MonoBehaviour
 	private Rigidbody2D rb2d;
 	public GameObject hero;
 	public GameObject triger;
+    public GameObject kula;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,12 @@ public class KulaTriger : MonoBehaviour
 		
 		rb2d.isKinematic = false;
 		Debug.Log("Współrzędna X gracza: " + wspolrzednaXGracza);
+             
 	}
+        if (gameObject.transform.position.y < -30 && gameObject.name == "kula") {
+            Destroy(this.gameObject);
+
+        }
+
     }
 }
