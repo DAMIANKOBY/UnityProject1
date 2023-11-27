@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        livesText.text = "Lives: " + amountOfLives.ToString();
+        if (useLives == true)
+            livesText.text = "Lives: " + amountOfLives.ToString();
 
         float horizontalMove = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(horizontalMove));

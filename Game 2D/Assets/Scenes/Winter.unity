@@ -980,11 +980,10 @@ GameObject:
   - component: {fileID: 126654691}
   - component: {fileID: 126654690}
   - component: {fileID: 126654689}
-  - component: {fileID: 126654688}
   - component: {fileID: 126654687}
   - component: {fileID: 126654686}
-  - component: {fileID: 126654685}
   - component: {fileID: 126654684}
+  - component: {fileID: 126654692}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1088,22 +1087,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!58 &126654685
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126654683}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9fb85e28b566ecb478b849496dd43cf4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
-  serializedVersion: 2
-  m_Radius: 0.3
 --- !u!114 &126654686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,6 +1109,10 @@ MonoBehaviour:
   DeadSound: {fileID: 8300000, guid: 8f53ad2d958c048e5a8e403a20d21df0, type: 3}
   JumpStartSound: {fileID: 8300000, guid: 1a9abdcacc68aa447b151d0b1f93754b, type: 3}
   JumpEndSound: {fileID: 8300000, guid: a967f92e38352bb4291945423de63499, type: 3}
+  useLives: 0
+  amountOfLives: 1
+  gameOverScreen: {fileID: 0}
+  livesText: {fileID: 0}
 --- !u!95 &126654687
 Animator:
   serializedVersion: 5
@@ -1147,32 +1134,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &126654688
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126654683}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9fb85e28b566ecb478b849496dd43cf4, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.25}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.19, y: 4.86}
-    newSize: {x: 0.8, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 1
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.5}
-  m_EdgeRadius: 0
 --- !u!50 &126654689
 Rigidbody2D:
   serializedVersion: 4
@@ -1263,6 +1224,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 193
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &126654692
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126654683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1}
+  m_Direction: 0
 --- !u!1001 &149067172
 PrefabInstance:
   m_ObjectHideFlags: 0
