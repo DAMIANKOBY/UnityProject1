@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,8 +26,11 @@ public class PlayerController : MonoBehaviour
     public bool useLives;
     public int amountOfLives = 1;
     public GameObject gameOverScreen;
+    public Text livesText;
 
     bool isFalling = false;
+
+    GameObject Manager;
 
     void Start()
     {
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        livesText.text = "Lives: " + amountOfLives.ToString();
+
         float horizontalMove = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if (horizontalMove < 0 && dirToRight)
@@ -110,11 +115,6 @@ public class PlayerController : MonoBehaviour
          isFalling = false;
     }
 
-    void GameOver()
-    {
-        SceneManager.LoadScene("Simple Main Menu");
-    }
-
     public void Dead()
     {
         if (useLives == true)
@@ -126,8 +126,9 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.LogError("Game Over");
                 gameOverScreen.SetActive(true);
-                Invoke("GameOver", 3f);
             }
         }
+        else
+            restartHero();
     }
 }
