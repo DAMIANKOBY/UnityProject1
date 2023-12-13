@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         else
             audioSrc.Stop();
 
-        rgdBody.velocity = new Vector2(horizontalMove*heroSpeed, rgdBody.velocity.y);
+        rgdBody.velocity = new Vector2(horizontalMove * heroSpeed, rgdBody.velocity.y);
         onTheGround = Physics2D.OverlapCircle(GroundTester.position, radius, layersToTest);
 
         if (Input.GetKeyDown(KeyCode.Space) && onTheGround)
@@ -110,10 +110,10 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = heroScale;
     }
 
-    public void restartHero() 
+    public void restartHero()
     {
-         gameObject.transform.position = startPoint.position;
-         isFalling = false;
+        gameObject.transform.position = startPoint.position;
+        isFalling = false;
     }
 
     public void Dead()
