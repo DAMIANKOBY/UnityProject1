@@ -22,7 +22,7 @@ public class CollisionDie : MonoBehaviour
     IEnumerator ResetCollisionFlag()
     {
         // Wait for a short duration before resetting the flag
-        yield return new WaitForSeconds(2f); // Adjust the duration as needed
+        yield return new WaitForSeconds(1f); // Adjust the duration as needed
 
         isColliding = false;
     }

@@ -53,6 +53,9 @@ TagManager:
   - name: First plane
     uniqueID: 1137628155
     locked: 0
+  - name: Water
+    uniqueID: 2378199353
+    locked: 0
   - name: Hero layer
     uniqueID: 341223477
     locked: 0

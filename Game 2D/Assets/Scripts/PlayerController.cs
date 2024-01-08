@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public Transform startPoint;
     private bool isMoving = false;
     private bool inAir = false;
+    private bool restarted = true;
 
     public AudioClip DeadSound;
     public AudioClip JumpStartSound;
@@ -110,19 +111,26 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = heroScale;
     }
 
-    public void restartHero()
+    public IEnumerator restartHero()
     {
-        gameObject.transform.position = startPoint.position;
+        yield return new WaitForSeconds(1f);
+        Quaternion rotate = new Quaternion(0, 0, 0, 0);
+        gameObject.transform.rotation = rotate;
+        if (!restarted ) {
+            gameObject.transform.position = startPoint.position;
+        }
+        restarted = true;
         isFalling = false;
     }
 
     public void Dead()
     {
+        restarted = false;
         if (useLives == true)
         {
             amountOfLives -= 1;
             if (amountOfLives > 0)
-                restartHero();
+                StartCoroutine(restartHero());
             else
             {
                 Debug.LogError("Game Over");
@@ -130,6 +138,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         else
-            restartHero();
+            StartCoroutine(restartHero());
     }
 }

@@ -939,6 +939,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 366344810}
     m_Modifications:
+    - target: {fileID: 4897144014574171106, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_Text
+      value: 'Factory
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684214526042566571, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_Name
+      value: Factory
+      objectReference: {fileID: 0}
     - target: {fileID: 6740656027005264890, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1034,6 +1044,10 @@ PrefabInstance:
     - target: {fileID: 6740656027183693131, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131073152099256604, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: scene
+      value: SciFi
       objectReference: {fileID: 0}
     - target: {fileID: 7286287893241551171, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: scene
