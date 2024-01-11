@@ -15,3 +15,6 @@ Graveyard Unknown Points: 1 Time: 00:11
 Desert afafd Points: 1 Time: 00:10
 Winter zimatest Points: 2 Time: 00:39
 Factory factory Points: 2 Time: 00:40
+Desert Piotrek Points: 12 Time: 01:40
+Infinity Piotrek Score: 102
+Desert Piotrek Points: 12 Time: 01:23
