@@ -8,6 +8,7 @@ public class CounterController : MonoBehaviour
 {
     int NumberOfPoints;
     public Text counterView;
+    public Text EndPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class CounterController : MonoBehaviour
     {
         NumberOfPoints++;
         counterView.text = "Points: " + NumberOfPoints.ToString();
+        EndPoints.text = "Points: " + NumberOfPoints.ToString();
     }
 
     public void ResetCounter()

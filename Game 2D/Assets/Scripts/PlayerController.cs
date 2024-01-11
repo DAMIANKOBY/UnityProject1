@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
     GameObject Manager;
 
+    public ScoreRead bsSript;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -134,6 +136,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Debug.LogError("Game Over");
+                bsSript.ZnajdzNajwiekszyWynikDlaMapy();
                 gameOverScreen.SetActive(true);
             }
         }

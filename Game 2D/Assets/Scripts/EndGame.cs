@@ -15,14 +15,14 @@ public class EndGame : MonoBehaviour
         {
 		Debug.LogError("The End");
 		finalScreen.SetActive(true);
-		Invoke("LoadNewLevel", 3f);
+		//Invoke("LoadNewLevel", 3f);
 
                
-         }
+        }
 	}
 
- void LoadNewLevel()
-	{
-	SceneManager.LoadScene("Simple Main Menu");
-	} 
+    public void LoadNewLevel()
+    {
+        SceneManager.LoadScene("Simple Main Menu");
+    } 
 }
