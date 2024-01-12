@@ -18,3 +18,4 @@ Factory factory Points: 2 Time: 00:40
 Desert Piotrek Points: 12 Time: 01:40
 Infinity Piotrek Score: 102
 Desert Piotrek Points: 12 Time: 01:23
+Winter test Points: 11 Time: 01:47
