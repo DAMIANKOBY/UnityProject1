@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(restartHero());
             else
             {
+                Freeze();
                 Debug.LogError("Game Over");
                 bsSript.ZnajdzNajwiekszyWynikDlaMapy();
                 gameOverScreen.SetActive(true);
@@ -148,5 +149,10 @@ public class PlayerController : MonoBehaviour
         }
         else
             StartCoroutine(restartHero());
+    }
+
+    public void Freeze()
+    {
+        gameObject.SetActive(false);
     }
 }
