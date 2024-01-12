@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     private float radius = 0.1f;
     public LayerMask layersToTest;
     public Transform startPoint;
-    private bool isMoving = false;
     private bool inAir = false;
     private bool restarted = true;
 
@@ -44,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        anim.SetBool("isMove", IsMoving());
+
         if (useLives == true)
             livesText.text = "Lives: " + amountOfLives.ToString();
 
@@ -58,12 +59,9 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (rgdBody.velocity.x != 0)
-            isMoving = true;
-        else
-            isMoving = false;
+        
 
-        if (isMoving && onTheGround)
+        if (IsMoving() && onTheGround)
         {
             if (!audioSrc.isPlaying)
                 audioSrc.Play();
@@ -123,6 +121,14 @@ public class PlayerController : MonoBehaviour
         }
         restarted = true;
         isFalling = false;
+    }
+
+    public bool IsMoving()
+    {
+        if (rgdBody.velocity.x != 0)
+            return true;
+        else
+            return false;
     }
 
     public void Dead()
