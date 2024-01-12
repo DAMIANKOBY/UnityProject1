@@ -13,11 +13,16 @@ public class EndGame : MonoBehaviour
     {
         if (collide.gameObject.name == "Player") 
         {
-		Debug.LogError("The End");
-		finalScreen.SetActive(true);
-		//Invoke("LoadNewLevel", 3f);
+		    Debug.LogError("The End");
+		    finalScreen.SetActive(true);
+            //Invoke("LoadNewLevel", 3f);
 
-               
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                player.SetActive(false);
+            }
+
         }
 	}
 
