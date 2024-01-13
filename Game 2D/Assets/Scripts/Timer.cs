@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -8,6 +8,18 @@ public class Timer : MonoBehaviour
     private bool isTimerRunning = true;
     public GameObject LevelComplete;
     public Text EndTime;
+
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("Timer"))
+        {
+            // Pobierz spawn z PlayerPrefs
+            seconds = PlayerPrefs.GetInt("Timer");
+
+            // Usuń klucz z PlayerPrefs, ponieważ już go użyliśmy
+            PlayerPrefs.DeleteKey("Timer");
+        }
+    }
 
     void Update()
     {

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,6 +39,19 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         rgdBody = GetComponent<Rigidbody2D>();
         audioSrc = GetComponent<AudioSource>();
+
+        if (PlayerPrefs.HasKey("SpawnName"))
+        {
+            // Pobierz spawn z PlayerPrefs
+            string spawnName = PlayerPrefs.GetString("SpawnName");
+
+            // Znajdź obiekt spawn w scenie
+            Transform spawn = GameObject.Find(spawnName)?.transform;
+            gameObject.transform.position = spawn.position;
+
+            // Usuń klucz z PlayerPrefs, ponieważ już go użyliśmy
+            PlayerPrefs.DeleteKey("SpawnName");
+        }
     }
 
     void Update()
@@ -101,6 +114,13 @@ public class PlayerController : MonoBehaviour
         {
             rgdBody.velocity = Vector2.zero;
         }
+
+        
+    }
+
+    public Transform GetSpawn()
+    {
+        return startPoint;
     }
 
     void Flip()
