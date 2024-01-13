@@ -601,6 +601,17 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+--- !u!114 &1577013684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9039945803468623890, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+  m_PrefabInstance: {fileID: 4901184000569541322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247c180fbe03b164dbe87d1a9f458df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1608041542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3411894999789952751, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
@@ -983,6 +994,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 366344810}
     m_Modifications:
+    - target: {fileID: 1059735670462082531, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1577013684}
+    - target: {fileID: 1059735670462082531, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701337977532204385, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_Text
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736771653331926052, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: m_Name
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 4897144014574171106, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
       propertyPath: m_Text
       value: 'Factory
@@ -1117,5 +1144,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 399491435}
+    - target: {fileID: 9039945803468623890, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
+      propertyPath: scene
+      value: Forest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b77efc54f851b5146a4fb3d8035ddca7, type: 3}
