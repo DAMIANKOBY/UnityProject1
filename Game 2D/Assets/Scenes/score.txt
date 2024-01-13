@@ -22,3 +22,6 @@ Winter test Points: 11 Time: 01:47
 Infinity afdafa Score: 43
 Graveyard ggga Points: 5 Time: 00:41
 Graveyard gsaga Points: 3 Time: 00:16
+Desert Piotrek Points: 77 Time: 05:50
+Desert Piotrek Points: 2 Time: 00:39
+Graveyard test Points: 5 Time: 00:17
