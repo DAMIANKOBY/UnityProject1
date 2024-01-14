@@ -1,26 +1,8 @@
-Infinity ddda Score: 9
-Infinity aa Score: 15
-Infinity aa Score: 15
-Infinity aa Score: 15
-Infinity a Score: 19
-Infinity avx Score: 35
-Infinity ada Score: 19
-Infinity aff Score: 41
-Graveyard sa Points: 1 Time: 01:02
-Graveyard sa Points: 4 Time: 02:02
-Graveyard saa Points: 2 Time: 00:22
-Graveyard sa Points: 4 Time: 01:52
-Infinity afafagg Score: 14
-Graveyard Unknown Points: 1 Time: 00:11
-Desert afafd Points: 1 Time: 00:10
-Winter zimatest Points: 2 Time: 00:39
-Factory factory Points: 2 Time: 00:40
-Desert Piotrek Points: 12 Time: 01:40
-Infinity Piotrek Score: 102
-Desert Piotrek Points: 12 Time: 01:23
-Winter test Points: 11 Time: 01:47
-Infinity afdafa Score: 43
-Graveyard ggga Points: 5 Time: 00:41
-Graveyard gsaga Points: 3 Time: 00:16
-Graveyard damian Points: 3 Time: 00:26
-Desert Piotrek Points: 12 Time: 01:48
+
+Factory DamianFact Points: 14 Time: 03:10
+Graveyard Grave Points: 5 Time: 01:40
+Desert desert Points: 65 Time: 05:28
+Winter winter Points: 27 Time: 02:11
+Forest forest Points: 20 Time: 01:15
+Infinity damian Score: 219
+Infinity damian2 Score: 17
